@@ -1,0 +1,82 @@
+@use "../abstracts/variables";
+
+.header {
+     &-content{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 28px 0;
+         .logo{
+
+         }
+         &-menu{
+             ul{
+                 display: flex;
+                 padding: 0;
+                 margin: 0;
+                 li{
+                     margin-right: 40px;
+                     a{
+                         font-size: 14px;
+                         font-weight: 500;
+                         line-height: 40px;
+                         text-transform: uppercase;
+                         letter-spacing: 0.04em;
+                         color: variables.$gray_900;
+                         text-decoration: none;
+                     }
+                     &:last-child{
+                         margin-right: 0;
+                     }
+                 }
+             }
+         }
+     }
+}
+
+
+// Responsive 
+@media (min-width:1024px) and (max-width: 1200px){
+
+}
+@media (min-width: 992px) and (max-width: 1023px){
+    
+}
+@media (min-width: 768px) and (max-width: 991px){
+    
+}
+@media (min-width: 575px) and (max-width: 767px){
+    .header{
+        &-content{
+            display: flex;
+            flex-direction: column;
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 574px){
+    .header{
+        &-content{
+            display: flex;
+            flex-direction: column;
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+            &-menu{
+                ul{
+                    li{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// abstracts
+@use "abstracts/variables";
+@use "base/typography";
+@use "abstracts/functions";
+
+// vendors
+@use "bootstrap/scss/bootstrap";
+
+@use "base/reset";
+
+@use "layout/header";
+@use "layout/banner";
+@use "layout/about";
+@use "layout/service";
+@use "layout/project";
+@use "layout/company";
+@use "layout/call-action";
+@use "layout/testomonial";
+@use "layout/blog";
+@use "layout/contact" as layoutContact;
+// @use "layout/footer";
+// @use "layout/nav";
+// @use "layout/breadcrumb";
+
+@use "components/buttons";
+@use "components/form";
+@use "components/cart";
+
+@use "pages/home";
+@use "pages/contact" as pageContact;
+
+@use 'themes/theme';

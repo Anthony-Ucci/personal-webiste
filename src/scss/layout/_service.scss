@@ -1,0 +1,48 @@
+@use "../abstracts/variables";
+
+.service{
+    padding: 100px 0;
+    h4{
+        text-align: center;
+        margin-bottom: 70px;
+        text-transform: capitalize;
+    }
+    &-content{
+        display: flex;
+    }
+}
+
+
+// Responsive
+@media (min-width: 1024px) and (max-width: 1199px){
+  
+}
+@media (min-width: 992px) and (max-width: 1023px){
+  
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .service-content-area{
+      margin-bottom: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px){
+
+    .service-content-area{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 575px){
+    .service{
+        padding: 50px 0;
+        &-text{
+            h4{
+                font-size: 32px;
+                line-height: 42px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .service-content-area{
+        margin-bottom: 20px;
+    }
+}

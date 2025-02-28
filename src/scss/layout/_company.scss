@@ -1,0 +1,119 @@
+@use "../abstracts/variables";
+
+.company{
+    padding: 100px 0;
+    &-content{
+        display: flex;
+        justify-content: center;
+        h3{
+            span{
+                color: variables.$primary;
+            }
+        }
+        .social-img-icon{
+            margin-right: 24px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &-social-activity{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 30px;
+            .social-img-icon{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// Responsive 
+@media (min-width: 992px) and (max-width: 1200px){
+    .company{
+        &-content{
+            &-text{
+              margin-bottom: 30px;
+            }      
+            &-social-activity{
+                 margin-left: 0;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .company{
+        &-content{
+            &-text{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                h3{
+                
+                    text-align: center;
+                    font-size: 29px;
+                    margin-bottom: 30px;
+                }
+            }
+        
+            &-social-activity{
+                justify-content: center;
+                 margin-left: 0;
+                .social-img-icon{
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 575px) and (max-width: 767px){
+    .company{
+        &-content{
+            &-text{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                h3{
+                
+                    text-align: center;
+                    font-size: 29px;
+                    margin-bottom: 30px;
+                }
+            }
+        
+            &-social-activity{
+                justify-content: center;
+                 margin-left: 0;
+                .social-img-icon{
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 574px){
+    .company{
+        padding: 50px 0;
+        &-content{
+            &-text{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                h3{
+                
+                    text-align: center;
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+        
+            &-social-activity{
+                justify-content: center;
+                 margin-left: 0;
+                .social-img-icon{
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

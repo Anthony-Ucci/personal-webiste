@@ -1,0 +1,190 @@
+@use "../abstracts/variables";
+
+.banner{
+    &-content{
+        display: flex;
+        &-left{
+            h3{
+                color: variables.$gray_900;
+                margin-bottom: 0;
+                span{
+                    color: variables.$primary;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 36px;
+                        background-color: variables.$primary;
+                        opacity: 0.15;
+                    }                 
+                }              
+            }
+            p{
+                margin: 32px 0;
+            }
+            .btn--primary{
+                margin-right: 16px;
+            }
+            .follow-content{
+                margin-top: 200px;
+                span{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: variables.$gray_900;
+                }
+                &-social{
+                    display: flex;
+                    margin-top: 12px;
+                    margin-bottom: 48px;
+                    .social-square{
+                        margin-right: 12px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-right{
+            position: relative;
+            .dot-shadow-img{
+                position: absolute;
+                top: 20%;
+                right: 20%;
+
+            }
+        }
+    }
+}
+
+// Responsive 
+@media (min-width: 992px) and (max-width: 1200px){
+    .banner{
+        &-content{
+            &-left{
+                h3{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .banner{
+        &-content{
+            &-left{
+                margin-bottom: 50px;
+                h3{
+                    font-size: 62px;
+                    line-height: 70px;
+                    margin-top: 25px;
+                }
+                .follow-content{
+                    margin-top: 30px;
+                    &-social{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &-right{
+                .dot-shadow-img{
+                    top: 30%;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 575px) and (max-width: 767px){
+    .banner{
+        margin-bottom: 50px;
+        &-content{
+            &-left{
+                h3{
+                    font-size: 50px;
+                    line-height: 60px;
+                    margin-top: 25px;
+                }
+                p{
+                    margin: 25px 0;
+                }
+                .follow-content{
+                    margin-top: 30px;
+                    &-social{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &-right{
+                .dot-shadow-img{
+                    top: 24%;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 574px){
+    .banner{
+        margin-bottom: 50px;
+        &-content{
+            &-left{
+                h3{
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin-top: 20px;
+                }
+                p{
+                    margin: 25px 0px;
+                }
+                .btn{
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                .btn--primary{
+                    margin-right: 10px;
+                }
+                .follow-content{
+                    margin-top: 30px;
+                    &-social{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &-right{
+                .dot-shadow-img{
+                    right: 8%;
+                }
+            }
+        }
+    }
+}
+// @media (max-width: 420px){
+//     .banner{
+//         margin-bottom: 50px;
+//         &-content{
+//             &-left{
+//                 h3{
+//                     font-size: 35px;
+//                     line-height: 50px;
+//                 }
+//                 .btn{
+//                     padding: 0 25px;
+//                 }
+//                 .follow-content{
+//                     margin-top: 30px;
+//                 }
+//             }
+//             &-right{
+//                 .dot-shadow-img{
+//                     right: 0;
+//                 }
+//             }
+//         }
+//     }
+// }

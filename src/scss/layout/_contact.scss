@@ -1,0 +1,241 @@
+@use "../abstracts/variables";
+
+.contact{
+    padding: 100px 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), #DFE3EB;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &-area-info{
+        padding: 48px;
+        background-color: variables.$white;
+        border-radius:8px;
+        box-shadow: 0px 12px 24px rgba(10, 25, 49, 0.02);
+        h3{
+            color: variables.$gray_900;
+            margin-bottom: 24px;
+        }
+        .contact-form{
+            form{
+                .top-input{
+                    display: flex;
+                    input{
+                        &:last-child{
+                            margin-left: 16px;
+                        }
+                    }
+                }
+                input{
+                    padding: 14px 0 14px 20px;
+                    width: 100%;
+                    margin-bottom: 16px;
+                    background-color: variables.$white;
+                    border: 1px solid #DFE3EB;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    text-transform: capitalize;
+                }
+                textarea{
+                    padding: 14px 0 0 20px;
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+                    width: 100%;
+                    height: 152px;
+                    border: 1px solid #DFE3EB;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    &-area-location{
+        padding: 48px;
+        background-color: variables.$white;
+        border-radius: 8px;
+        box-shadow: 0px 12px 24px rgba(10, 25, 49, 0.02);
+        position: relative;
+        h3{
+            color: variables.$gray_900;
+            margin-bottom: 24px;
+        }
+        .contact-location-icon{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            .location-text{
+                margin-left: 16px;
+                span{
+                    color: variables.$gray_900;
+                }
+                p{
+                    color: variables.$gray_900;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .bottom-social-icon{
+            display: flex;
+            align-items: center;
+            .social{
+                margin-right: 12px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .round-shape{
+        position: absolute;
+        bottom: 53px;
+        right: 180px;
+        opacity: 0.5;
+        z-index: -1;
+        pointer-events: none; 
+    }
+    .lg-round-shape{
+        position: absolute;
+        top: -285px;
+        left: 0;
+        opacity: 0.5;
+        z-index: -2;
+        pointer-events:none;
+    }
+    .black-dot{
+        position: absolute;
+        top: -35px;
+        right: -35px;
+        pointer-events:none;
+    }
+}
+
+
+// Responsive 
+@media (min-width:1024px) and (max-width: 1200px){
+
+}
+@media (min-width: 992px) and (max-width: 1023px){
+   
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .contact-area-info{
+        margin-bottom: 20px;
+        .contact-form{
+            text-align: center;
+            form{
+                .top-input{
+                    display: inline-block;
+                    width: 100%;
+                    input:last-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .contact-area-location{
+        .black-dot{
+            top: 0;
+            right: 0;
+        }
+    }
+}
+@media (min-width: 575px) and (max-width: 767px){
+    .contact-area-info{
+        margin-bottom: 20px;
+        .contact-form{
+            text-align: center;
+            form{
+                .top-input{
+                    display: inline-block;
+                    width: 100%;
+                    input:last-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .contact-area-location{
+        .black-dot{
+            top: 0;
+            right: 0;
+        }
+    }
+}
+@media (max-width: 574px){
+    .contact{
+        padding: 50px 0;
+        .contact-area-info{
+            margin-bottom: 20px;
+            padding: 24px;
+            h3{
+                font-size: 30px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .contact-form{
+                text-align: center;
+                form{
+                    .top-input{
+                        display: inline-block;
+                        width: 100%;
+                        input:last-child{
+                            margin-left: 0;
+                        }
+                    }
+                    .btn--primary{
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .contact-area-location{
+            padding: 24px;
+            h3{
+                font-size: 30px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .black-dot{
+               display: none;
+            }
+            .contact-location-icon{
+                display: flex;
+                flex-direction: column;
+                .social-lg-round{
+
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .bottom-social-icon{
+                flex-wrap: wrap;
+                justify-content: center;
+                .social{
+                    margin-right: 5px;
+                    margin-bottom: 10px;
+                    &-sm-round{
+                        margin-right: 0;
+                        border-radius: 0px;
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .contact-location-icon{
+                .location-text{
+                    margin-left: 0px;
+                    margin-top: 20px;
+                    span{
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
